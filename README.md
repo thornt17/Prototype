@@ -1,1 +1,2 @@
 # Prototype
+This prototype shows our working google authorization sign in. We are able to show that we can both sign in and sign out a user succesfully. Our API call to archive.org failed, so therfore we weren't able to get it to work. We are unfamiliar with the languages necessary to complete this and struggled at find ing our error. We provided our code regardless and plan on going to office hours to learn more.
