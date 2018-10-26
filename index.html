@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Miniproject</title>
+    <meta name="google-signin-client_id" content="182951977252-7jm4ujnvk9tn4gvak63nufc0h27qj6u7.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+<div class="g-signin2" data-onsuccess="onSignIn">
+</div>
+<script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('Name: ' + profile.getName());
+    }
+</script>
+
+<h2 id="yup"> Welcome, Sign in then enter your search query!</h2>
+
+<form id="formId">
+    <input type="text" id="textFieldId" name="textField">
+    <button type="search" id="searchButton">Search</button>
+</form>
+<script src="prototype.js"></script>
+<br />
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+</script>
+
+</body>
+</html>
